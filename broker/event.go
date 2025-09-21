@@ -1,6 +1,6 @@
 package broker
 
 const (
-	MangaAnimeSamaInitAll = "manga.anime-same.init"
-	MangaAnimeSamaUpdate  = "manga.anime-same.update"
+	MangaAnimeSama = "manga.anime-same"
+	MangaNautiljon = "manga.nautiljon"
 )

@@ -20,12 +20,12 @@ func Connect(user, password, host, port string) (*amqp.Channel, func() error) {
 		log.Fatal(err)
 	}
 
-	err = ch.ExchangeDeclare(MangaAnimeSamaInitAll, "direct", true, false, false, false, nil)
+	err = ch.ExchangeDeclare(MangaAnimeSama, "direct", true, false, false, false, nil)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	err = ch.ExchangeDeclare(MangaAnimeSamaUpdate, "fanout", true, false, false, false, nil)
+	err = ch.ExchangeDeclare(MangaNautiljon, "fanout", true, false, false, false, nil)
 	if err != nil {
 		log.Fatal(err)
 	}
