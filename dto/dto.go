@@ -11,4 +11,5 @@ const (
 type MangaAction struct {
 	Action Action  `json:"action"`
 	Title  *string `json:"title"`
+	Slug   *string `json:"slug"`
 }
