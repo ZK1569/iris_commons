@@ -4,6 +4,7 @@ type Action string
 
 const (
 	Init   Action = "INIT"
+	Create Action = "CREATE"
 	Update Action = "UPDATE"
 	Delete Action = "DELETE"
 )
