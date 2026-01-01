@@ -26,7 +26,7 @@ type Chapter struct {
 
 type Scan struct {
 	ID        int64     `gorm:"primaryKey;autoIncrement;column:id" json:"id"`
-	Image_ID  string    `gorm:"type:text;not null;column:image_url" json:"image_url"`
+	Image_ID  string    `gorm:"type:text;not null;column:image_id" json:"image_id"`
 	Server    string    `gorm:"type:text;not null;column:server" json:"server"`
 	Path      string    `gorm:"type:text;not null;column:path" json:"path"`
 	Sequence  int       `gorm:"column:sequence;not null" json:"sequence"`
