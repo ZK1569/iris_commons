@@ -27,9 +27,9 @@ type Chapter struct {
 type Scan struct {
 	ID        int64     `gorm:"primaryKey;autoIncrement;column:id" json:"id"`
 	Image_ID  string    `gorm:"type:text;not null;column:image_id" json:"image_id"`
-	Server    string    `gorm:"type:text;not null;column:server" json:"server"`
-	Path      string    `gorm:"type:text;not null;column:path" json:"path"`
+	Server    string    `gorm:"type:text;not null;column:server" json:"-"`
+	Path      string    `gorm:"type:text;not null;column:path" json:"-"`
 	Sequence  int       `gorm:"column:sequence;not null" json:"sequence"`
-	SourceID  int64     `gorm:"column:source_id;not null" json:"source_id"`
-	CreatedAt time.Time `gorm:"autoCreateTime;default:CURRENT_TIMESTAMP" json:"created_at"`
+	SourceID  int64     `gorm:"column:source_id;not null" json:"-"`
+	CreatedAt time.Time `gorm:"autoCreateTime;default:CURRENT_TIMESTAMP" json:"-"`
 }
