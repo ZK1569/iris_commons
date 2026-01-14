@@ -10,7 +10,7 @@ type Manga struct {
 	ID                int64          `gorm:"primaryKey;autoIncrement;column:id" json:"id"`
 	Title             string         `gorm:"type:varchar(300);not null;column:title" json:"title"`
 	AlternativeTitles pq.StringArray `gorm:"type:text[];column:alternative_titles" json:"alternative_titles"`
-	CoverID           int64          `gorm:"column:cover_id" json:"-"`
+	CoverID           string         `gorm:"column:cover_id" json:"-"`
 	Slug              string         `gorm:"type:varchar(300);unique;not null;column:slug" json:"slug"`
 	Synopsis          string         `gorm:"type:text;not null;column:synopsis" json:"synopsis"`
 	LastChapter       *int           `gorm:"column:last_chapter" json:"last_chapter"`
