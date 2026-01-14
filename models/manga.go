@@ -25,9 +25,8 @@ type Manga struct {
 }
 
 type Cover struct {
-	ID        int64     `gorm:"primaryKey;autoIncrement;column:id" json:"id"`
 	Path      string    `gorm:"type:text;not null;colmun:path" json:"-"`
-	ImageId   string    `gorm:"type:text;not null;column:image_id" json:"-"`
+	ImageId   string    `gorm:"type:text;not null;column:image_id;unique" json:"-"`
 	Server    string    `gorm:"type:text;not null;column:server" json:"-"`
 	CreatedAt time.Time `gorm:"autoCreateTime;default:CURRENT_TIMESTAMP" json:"-"`
 }
